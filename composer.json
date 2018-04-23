@@ -1,0 +1,18 @@
+{
+    "name": "nkymh/php-skeleton",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "nkymh",
+            "email": "nakayama.h@gmail.com"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^1.23",
+        "hassankhan/config": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
+}
