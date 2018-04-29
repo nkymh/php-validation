@@ -3,6 +3,7 @@
 ## Setup
 
  $ composer install
+ 
  $ sudo apt-get install -y php-xdebug
 
 
