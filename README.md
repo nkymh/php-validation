@@ -43,6 +43,7 @@ Eclipse/Che のワークスペース上に、リポジトリを取得する。
 * phing
 
 ビルドツール。各種コマンドをまとめておくために便利。
+https://www.phing.info/
 
 * PHPUnit
 
