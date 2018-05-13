@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="foo_project" basedir="." default="all">
+  <property name="outputDir" value="build"/>
+  <property name="targetDir" value="src"/>
+  
+  <target name="pre">
+    <mkdir dir="${outputDir}" />
+    <mkdir dir="${outputDir}/logs" />
+    <mkdir dir="${outputDir}/logs/pmd" />
+  
+  </target>
+  
+  <target name="phpcpd" depends="pre">
+    <phpcpd minTokens="10">
+      <fileset dir="${targetDir}">
+        <include name="**/**/*.php"/>
+      </fileset>
+      <formatter type="pmd" outfile="${outputDir}/logs/cpd.xml"/>
+    </phpcpd>
+  </target>
+
+  <target name="phpmd" depends="pre">
+    <phpmd rulesets="phpmd.xml">
+      <fileset dir="${targetDir}">
+      </fileset>
+      <formatter type="text" outfile="stdout" />
+      <formatter type="html" outfile="${outputDir}/logs/pmd/pmd.html"/>
+      <formatter type="xml" outfile="${outputDir}/logs/pmd/pmd.xml"/>
+    </phpmd>
+  </target>
+
+  <target name="phpcs" description="Generate phpcs.xml using PHP_CodeSniffer" depends="pre">
+    <phpcodesniffer standard="PSR2" file="${targetDir}/" allowedFileExtensions="php" >
+      <formatter type="checkstyle" outfile="${outputDir}/logs/phpcs.xml"/>
+    </phpcodesniffer>
+  </target>
+
+  <target name="phpunit" depends="pre">
+    <exec command="phpunit -c phpunit.xml" logoutput="true" />
+  </target>
+
+  <target name="all" depends="pre,phpcpd,phpmd,phpcs,phpunit" />
+
+</project>

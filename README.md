@@ -34,15 +34,25 @@ Eclipse/Che のワークスペース上に、リポジトリを取得する。
 ~/vendor/
 
 
-## UnitTest
+## ツール
 
- $ phpunit
+* phing
 
-テスト結果は、
-　　build/logs/coverage/clover.xml
+ビルドツール。各種コマンドをまとめておくために便利。
 
-カバレッジ結果は、
-　　build/logs/coverage/html/index.html
+* PHPUnit
 
-に出力する。
+テストフレームワーク
+
+* PHPMD
+
+コードチェッカー。PHPのダメなコードを探してくれるツール。
+
+* PHPCPD
+
+コピペ検出ツール。重複コードを探してくれるツール。
+
+* PHP_CodeSniffer
+
+コーディング規約チェッカー。
  
