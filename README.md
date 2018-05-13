@@ -10,6 +10,10 @@ Eclipse/Che のワークスペース上に、リポジトリを取得する。
 
 ワークスペース上の Terminal から、次のコマンドを実行する。
 
+ $ composer config -g repos.packagist composer https://packagist.jp
+ 
+ $ composer global require hirak/prestissimo
+ 
  $ composer install
  
  $ sudo apt-get install -y php-xdebug
