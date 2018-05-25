@@ -2,11 +2,12 @@
 
 require_once('vendor/autoload.php');
 
-use sample\Calc;
+use nkymh\validation\ConcreteFactory;
 
 
-$obj = new Calc();
+$va = new ConcreteFactory();
 
-echo '4+3=' . $obj->plus(4,3);
+echo "ipv4 = " . $va->createProduct('IPv4')->getName() . "\n";
 
+echo "ipv6 = " . $va->createProduct('IPv6')->getName() . "\n";
 

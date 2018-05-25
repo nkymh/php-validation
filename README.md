@@ -1,4 +1,4 @@
-# php-skeleton
+# php-validation
 
 Eclipse/Che 上で使用する PHP プロジェクトのスケルトンです。
 
@@ -12,9 +12,9 @@ Eclipse/Che のワークスペース上に、リポジトリを取得する。
 
  $ composer config -g repos.packagist composer https://packagist.jp
  
- $ composer global require hirak/prestissimo
- 
  $ composer install
+ 
+ $ composer global require hirak/prestissimo
  
  $ sudo apt-get install -y php-xdebug
 
